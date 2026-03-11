@@ -3,7 +3,7 @@ package search;
 public class FindEvenDigits {
     public static void main(String[] args) {
         int[] arr = {555,9001,482, -1771, 3465, 7, 23645};
-        System.out.println(findNumbers(arr));;
+        System.out.println(findNumbers(arr));
     }
 
     static int findNumbers(int[] nums) {
