@@ -6,7 +6,9 @@ public class BinarySearch {
         int target = 76;
         System.out.println(binarySearch(arr, target));
     }
-
+// If we're searching for a specific element
+// loop through is start <= end
+// otherwise start < end
     static int binarySearch(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
