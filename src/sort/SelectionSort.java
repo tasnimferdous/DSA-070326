@@ -1,7 +1,7 @@
 package sort;
 
 import java.util.Arrays;
-
+//Find maximum and move it at the end
 public class SelectionSort {
     public static void main(String[] args) {
         int[] arr = {8,1,7,5,2,9,6,3,4};
