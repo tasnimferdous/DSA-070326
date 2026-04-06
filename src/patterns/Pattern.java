@@ -13,7 +13,19 @@ public class Pattern {
 //        pattern6(n);
 //        pattern28(n);
 //        pattern30(n);
-        pattern17(n);
+//        pattern17(n);
+        pattern31(n);
+    }
+
+    private static void pattern31(int n) {
+        System.out.println("Pattern 31");
+        for(int i = 1; i <= 2 * n - 1; i++){
+            for(int j = 1; j <= 2 * n - 1; j++){
+                int minDistance = n + 1 - Math.min(Math.min(i, j), Math.min(2 * n - i, 2 * n - j));
+                System.out.print(minDistance + " ");
+            }
+            System.out.println();
+        }
     }
 
     private static void pattern17(int n) {
