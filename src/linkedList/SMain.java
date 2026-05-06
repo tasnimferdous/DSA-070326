@@ -1,6 +1,6 @@
 package linkedList;
 
-public class Main {
+public class SMain {
     public static void main(String[] args) {
         SLL list = new SLL();
         list.insertFirst(3);
