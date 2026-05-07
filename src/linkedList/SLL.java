@@ -133,4 +133,15 @@ public class SLL {
             this.next = next;
         }
     }
+
+    void deleteDuplicates() {
+        Node node = head;
+        while (node != null && node.next != null){
+            if(node.value == node.next.value){
+                node.next = node.next.next;
+            }else{
+                node = node.next;
+            }
+        }
+    }
 }
