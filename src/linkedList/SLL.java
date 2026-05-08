@@ -173,4 +173,33 @@ public class SLL {
 
         return ans;
     }
+
+    public void createCycle(int val, int pos) {
+        if (tail == null) {
+            insertFirst(val);
+            return;
+        }
+        Node node = new Node(val);
+        tail.next = node;
+        tail = node;
+        Node temp = head;
+        int i = 1;
+        while(i != pos){
+            i++;
+            temp = temp.next;
+        }
+        tail.next = temp;
+        size++;
+    }
+
+    public boolean hasCycle(SLL list){
+        Node fast = list.head;
+        Node slow = list.head;
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast == slow) return true;
+        }
+        return false;
+    }
 }
