@@ -184,7 +184,7 @@ public class SLL {
         tail = node;
         Node temp = head;
         int i = 1;
-        while(i != pos){
+        while(i != pos && temp!= null){
             i++;
             temp = temp.next;
         }
@@ -201,5 +201,40 @@ public class SLL {
             if(fast == slow) return true;
         }
         return false;
+    }
+
+    public void detectCycle(SLL list){
+        Node fast = list.head;
+        Node slow = list.head;
+        Node f = list.head;
+        Node s = list.head;
+        int length = 0;
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast == slow){
+                do{
+                    slow = slow.next;
+                    length++;
+                }while(slow != fast);
+                System.out.println();
+                break;
+            }
+        }
+
+        if(length == 0){
+            System.out.println("No Cycle");
+            return;
+        }
+        while(length > 0){
+            f = f.next;
+            length--;
+        }
+
+        while (f != s){
+            f = f.next;
+            s = s.next;
+        }
+        System.out.println("Cycle at " + f.value);
     }
 }
