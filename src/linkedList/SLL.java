@@ -237,4 +237,15 @@ public class SLL {
         }
         System.out.println("Cycle at " + f.value);
     }
+
+    public void middle(){
+        Node fast = head;
+        Node slow = head;
+        while(fast != null && fast.next != null){
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        assert slow != null;
+        System.out.println("Middle is " + slow.value);
+    }
 }
