@@ -120,6 +120,22 @@ public class SLL {
         System.out.println("END");
     }
 
+    public void reverse() {
+        Node prev = null;
+        Node curr = head;
+        Node next = head.next;
+
+        while(curr != null){
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+            if(next != null) {
+                next = next.next;
+            }
+        }
+        head = prev;
+    }
+
     private class Node {
         private int value;
         private Node next;
