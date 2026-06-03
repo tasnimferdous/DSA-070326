@@ -8,6 +8,33 @@ public class BinaryTree {
         insertTreeNode(root);
 
         prettyDisplay(root, 0);
+        System.out.println("Pre-order:");
+        preOrder(root);
+        System.out.println("\nIn-order:");
+        inOrder(root);
+        System.out.println("\nPost-order:");
+        postOrder(root);
+    }
+
+    private static void postOrder(TreeNode root) {
+        if (root == null) return;
+        postOrder(root.left);
+        postOrder(root.right);
+        System.out.print(root.value + " ");
+    }
+
+    private static void inOrder(TreeNode root) {
+        if (root == null) return;
+        inOrder(root.left);
+        System.out.print(root.value + " ");
+        inOrder(root.right);
+    }
+
+    private static void preOrder(TreeNode root) {
+        if (root == null) return;
+        System.out.print(root.value + " ");
+        preOrder(root.left);
+        preOrder(root.right);
     }
 
     private static void prettyDisplay(TreeNode root, int level) {
