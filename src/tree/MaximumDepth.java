@@ -9,7 +9,7 @@ public class MaximumDepth {
         root.left.right = new TreeNode(5);
         root.right.left = new TreeNode(6);
         root.right.right = new TreeNode(7);
-        root.right.right.right = new TreeNode(8);;
+        root.right.right.right = new TreeNode(8);
 
         int result = maxDepth(root);
         System.out.println(result);
